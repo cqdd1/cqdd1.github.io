@@ -1,258 +1,232 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>BIG.BOSS博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BIG.BOSS博客">
-<meta property="og:url" content="http://cqdd1.github.io/index.html">
-<meta property="og:site_name" content="BIG.BOSS博客">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BIG.BOSS博客">
-<meta name="twitter:description">
-  
-    <link rel="alternative" href="/atom.xml" title="BIG.BOSS博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="/images/52482743_p0.png" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">BIG.BOSS</a></h1>
-		</hgroup>
-
-		
-		<p class="header-subtitle">通往PHP大神之路中</p>
-		
-
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="https://github.com/cqdd1" title="github">github</a>
-					        
-								<a class="mail" target="_blank" href="/zhuohengwu@foxmail.com" title="mail">mail</a>
-					        
-								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a>
-					</div>
-				</section>
-				
-				
-				
-
-				
-			</div>
-		</div>
-	</header>				
+<div class="main">
+    <div class="header">
+        <ul id="pages">
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="/#/tags">tags</a>
+            </li>
+            <li>
+                <a href="/#/archive">archive</a>
+            </li>
+        </ul>
+    </div>
+    <div class="wrap-header">
+        <h1>
+        <a href="/" id="title"></a>
+        </h1>
+    </div>
+    <div class="innermain" id="main">
+    </div>
+    <div class="footer">
+        <p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+    </div>
 </div>
+<script src="main.js"></script>
+<script id="itemTemplate" type="text/mustache">
+    {{#posts}}
+    <div class="item">
+        <div class="date">
+            <div class="little">
+            </div>
+            {{date}}
+        </div>
+        <div class="title">
+            <h2>
+                <a href="{{path}}">{{title}}</a>
+            </h2>
+        </div>
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">BIG.BOSS</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="/images/52482743_p0.png" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">BIG.BOSS</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">通往PHP大神之路中</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/cqdd1" title="github">github</a>
-			        
-						<a class="mail" target="_blank" href="/zhuohengwu@foxmail.com" title="mail">mail</a>
-			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-abc" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/01/18/abc/" class="article-date">
-  	<time datetime="2015-01-17T16:00:00.000Z" itemprop="datePublished">2015-01-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/18/abc/">Mysql优化小技巧</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-_索引碎片与维护">1. 索引碎片与维护</h1><blockquote>
-<p>1.在长期的数据更新过程中, 索引文件和数据文件,都将产生空洞，形成碎片<br>2.我们可以通过一个nop操作(不产生对数据实质影响的操作), 来修改表<br>3.比如: 表的引擎为InnoDB , 可以 &gt; alter table tableName engine InnoDB<br>4.也可以 &gt; optimize table tableName ,也可以修复<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习/">学习</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/01/18/abc/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-</div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2015 BIG.BOSS
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
-    </div>
-    
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: null,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
+    {{/posts}}
+    <ul class="pages">
+        Pages:
+        {{#pages}}
+            <li>
+            {{#select}}
+                <span class="selected">{{num}}</span>
+            {{/select}}
+            {{^select}}
+                <a href="{{path}}">{{num}}</a>
+            {{/select}}
+            </li>
+        {{/pages}}
+    </ul>
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-  </div>
+<script id="archiveTemplate" type="text/mustache">
+    {{#group}}
+    {{name}}
+    {{#posts}}
+    <div class="archive">
+    <span>{{date}}</span>
+    <a href="{{path}}">{{title}}</a>
+    </div>
+    {{/posts}}
+    {{/group}}
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script id="tagsTemplate" type="text/mustache">
+    <ul style="list-style: none">
+        {{#tags}}
+        <li style="display:inline; margin: 15px;">
+            <a href="{{path}}" style="font-size: {{size}}%">{{name}}</a>
+        </li>
+        {{/tags}}
+    </ul>
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            data.posts.sort(function(a, b){
+                if (a.date > b.date)
+                    return -1;
+                if (a.date < b.date)
+                    return 1;
+                return 0;
+            });
+            console.log(data.posts);
+            var per = data.number_of_posts_per_page;
+            var n = data.posts.length;
+            var num = Math.floor((n-1)/per)+1;
+            var arr = [];
+            var tmp = [];
+            for (var i = 0; i < n; ++i) {
+                if (i != 0 && i % per == 0) {
+                    arr.push(tmp)
+                    tmp = [];
+                }
+                tmp.push(data.posts[i]);
+            }
+            if (tmp.length > 0)
+                arr.push(tmp);
+            var pages = [{"select": true, "num": 1, "path": "#/page/1"}];
+            for (var i = 1; i < num; ++i)
+                pages.push({"select": false, "num": i+1, "path": "#/page/"+(i+1)});
+            var itemTemplate = Hogan.compile($("#itemTemplate").html());
+            var itemHtml = itemTemplate.render({"posts": arr[0], "pages": pages});
+            $("#main").html(itemHtml);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            var App = Spine.Controller.sub({
+                el: $("#main"),
+                init: function() {
+                    this.routes({
+                        "/page/:page": function(page) {this.go(page);},
+                        "/tags": function() {this.tags();},
+                        "/tag/:tag": function(param) {this.tag(param);},
+                        "/archive": function() {this.archive();}
+                    });
+                    Spine.Route.setup();
+                },
+                go: function(page) {
+                    page = Math.floor(page.page);
+                    for (var i = 0; i < pages.length; ++i)
+                        pages[i].select = false;
+                    pages[page-1].select = true;
+                    var tmppages = pages;
+                    if (page > 2 && pages.length > 4)
+                        tmppages = pages.slice(page-3);
+                    if (tmppages.length > 5)
+                        tmppages = tmppages.slice(0, 5);
+                    if (pages.length > 4 && tmppages.length < 5)
+                        tmppages = pages.slice(-5);
+                    itemHtml = itemTemplate.render({"posts": arr[page-1], "pages": tmppages});
+                    $("#main").html(itemHtml);
+                },
+                tags: function() {
+                    var ts = {};
+                    var posts = data.posts;
+                    var tf = function() {
+                        for (var i = 0; i < posts.length; ++i) {
+                            var tmp = posts[i].tags.split(" ");
+                            for (var j = 0; j < tmp.length; ++j) {
+                                if (tmp[j].length == 0)
+                                    continue;
+                                if (!(tmp[j] in ts))
+                                    ts[tmp[j]] = 0;
+                                ts[tmp[j]]++;
+                            }
+                        }
+                    }
+                    tf();
+                    posts = data.pages;
+                    tf();
+                    var ans = [];
+                    for (var k in ts) {
+                        ans.push({"name": "#"+k, "size": 100+Math.sqrt(ts[k]-1)*30, "path": "#/tag/"+k});
+                    }
+                    var tagsTemplate = Hogan.compile($("#tagsTemplate").html());
+                    var tagsHtml = tagsTemplate.render({"tags": ans});
+                    $("#main").html(tagsHtml);
+                },
+                tag: function(param) {
+                    var tag = param.tag;
+                    var group = [{"name": "#"+tag}];
+                    var posts = [];
+                    for (var i = 0; i < data.posts.length; ++i) {
+                        var tmp = data.posts[i].tags.split(" ");
+                        if (tmp.indexOf(tag) != -1)
+                            posts.push(data.posts[i]);
+                    }
+                    for (var i = 0; i < data.pages.length; ++i) {
+                        var tmp = data.pages[i].tags.split(" ");
+                        if (tmp.indexOf(tag) != -1)
+                            posts.push(data.pages[i]);
+                    }
+                    group[0].posts = posts;
+                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
+                    var tmpHtml = tmpTemplate.render({"group": group});
+                    $("#main").html(tmpHtml);
+                },
+                archive: function() {
+                    var group = [];
+                    var posts = data.posts;
+                    var now = -1;
+                    var name = "";
+                    for (var i = 0; i < posts.length; ++i) {
+                        if (name != posts[i].date.slice(0,4)) {
+                            name = posts[i].date.slice(0,4);
+                            group.push({"name": name, "posts": []});
+                            now++;
+                        }
+                        group[now].posts.push(posts[i]);
+                    }
+                    var tmpTemplate = Hogan.compile($("#archiveTemplate").html());
+                    var tmpHtml = tmpTemplate.render({"group": group});
+                    $("#main").html(tmpHtml);
+                }
+            });
+            new App();
+        },
+        error: function(e) {
+            console.log("init error");
+        }
+    });    
+});
+</script>
 </body>
 </html>
